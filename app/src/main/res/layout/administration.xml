@@ -79,19 +79,5 @@
             android:textSize="24sp"
             android:textStyle="normal|bold|italic" />
 
-        <TextView
-            android:id="@+id/link_signup"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:autoLink="all"
-            android:background="@android:color/white"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="No account yet? Create one"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="normal|bold|italic" />
-
     </LinearLayout>
 </ScrollView>
