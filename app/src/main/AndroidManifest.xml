@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projet_securite">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".Accueil"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACCUEIL"
+            android:value=".accueil" />
+
+        <activity
+            android:name=".Deposer"
+            android:label="Recrutement De Gardiens"
+            android:parentActivityName=".Accueil">
+            <meta-data
+                android:name="android.support.PARENT_ACCUEIL"
+                android:value=".deposer" />
+        </activity>
+
+        <activity
+            android:name=".Engagement"
+            android:label="Engagement De Gardiens"
+            android:parentActivityName=".Accueil">
+            <meta-data
+                android:name="android.support.PARENT_ACCUEIL"
+                android:value=".engagement" />
+        </activity>
+
+        <activity android:name=".Administration"> </activity>
+
+        <activity android:name=".SignupActivity"> </activity>
+
+
+
+        <activity android:name=".Agence"></activity>
+
+
+    </application>
+
+</manifest>

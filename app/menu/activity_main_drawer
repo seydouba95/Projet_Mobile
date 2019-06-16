@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item android:title="@string/maison">
+        <menu>
+            <item
+
+                android:id="@+id/nav_recruter"
+                android:icon="@drawable/ic_menu_sort_by_size"
+                android:title="Liste Des Gardiens De Maison" />
+
+        </menu>
+    </item>
+
+    <item  android:title="@string/recruter">
+        <menu>
+            <item
+                android:id="@+id/nav_engagement"
+                android:icon="@drawable/ic_menu_sort_by_size"
+                android:title="Liste Des Gardiens De Service " />
+        </menu>
+
+    </item>
+    <item
+        android:icon="@drawable/ic_secure"
+        android:title="@string/connecter">
+        <menu>
+            <item
+                android:id="@+id/nav_connecter"
+
+                android:icon="@drawable/ic_secure"
+                android:title="Login Gardien " />
+        </menu>
+
+    </item>
+
+
+
+
+</menu>

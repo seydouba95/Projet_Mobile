@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "33019171399",
+    "firebase_url": "https://ndogoucoding-405d0.firebaseio.com",
+    "project_id": "ndogoucoding-405d0",
+    "storage_bucket": "ndogoucoding-405d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33019171399:android:802641ad5584cbd4",
+        "android_client_info": {
+          "package_name": "com.example.projet_securite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33019171399-aao5btjpaecktm5l7delo7l878jitkji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_jEb2FXIo7XEffe-UaLjSZq3vVFjmJ4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33019171399-aao5btjpaecktm5l7delo7l878jitkji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
