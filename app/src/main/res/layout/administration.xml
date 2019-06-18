@@ -39,8 +39,9 @@
             <EditText
                 android:id="@+id/input_email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:background="@android:color/white"
+                android:drawableLeft="@drawable/ic_email"
                 android:hint="@string/prompt_email"
                 android:inputType="textEmailAddress"
                 android:textColorHint="@android:color/black"
@@ -60,6 +61,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
+                android:drawableStart="@drawable/ic_secure"
+                android:drawableLeft="@drawable/ic_secure"
                 android:hint="@string/prompt_password"
                 android:inputType="textPassword"
                 android:textColorHint="@android:color/black"
@@ -78,6 +81,17 @@
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="normal|bold|italic" />
+
+        <TextView
+            android:id="@+id/link_signup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:text="No account yet? Create one"
+            android:textColor="@android:color/white"
+            android:textSize="16dip" />
 
     </LinearLayout>
 </ScrollView>

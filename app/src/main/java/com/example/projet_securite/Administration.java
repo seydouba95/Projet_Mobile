@@ -1,12 +1,9 @@
 package com.example.projet_securite;
 
-import android.app.ProgressDialog;
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 
 import android.content.Intent;
 import android.view.View;
@@ -40,7 +37,7 @@ public class Administration extends AppCompatActivity {
 
         btn_login = (Button) findViewById(R.id.btn_login);
         input_email = (EditText) findViewById(R.id.input_email);
-        input_password = (EditText) findViewById(R.id.input_password);
+        input_password = (EditText) findViewById(R.id.input_password_conf);
         link_signup = (TextView) findViewById(R.id.link_signup);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         myauth = FirebaseAuth.getInstance();
@@ -55,7 +52,7 @@ public class Administration extends AppCompatActivity {
         link_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Accueil.class);
+                Intent intent = new Intent(getApplicationContext(), Signup.class);
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }
         });

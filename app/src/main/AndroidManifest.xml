@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projet_securite">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -58,6 +58,7 @@
 
 
         <activity android:name=".Agence"></activity>
+        <activity android:name=".Signup"></activity>
 
 
     </application>
