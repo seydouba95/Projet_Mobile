@@ -36,8 +36,8 @@ public class Administration extends AppCompatActivity {
         getSupportActionBar().setTitle("Connection");
 
         btn_login = (Button) findViewById(R.id.btn_login);
-        input_email = (EditText) findViewById(R.id.email2);
-        input_password = (EditText) findViewById(R.id.input_password_conf);
+        input_email = (EditText) findViewById(R.id.email1);
+        input_password = (EditText) findViewById(R.id.password1);
         link_signup = (TextView) findViewById(R.id.link_signup);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         myauth = FirebaseAuth.getInstance();

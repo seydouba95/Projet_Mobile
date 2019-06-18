@@ -54,19 +54,11 @@
                 android:value=".engagement" />
         </activity>
 
-        <activity
-            android:name=".Administration"
-            android:label="Agence"
-            android:parentActivityName=".Accueil">
-            <meta-data
-                android:name="android.support.PARENT_ACCUEIL"
-                android:value=".administration" />
-        </activity>
-        <activity android:name=".Signup"></activity>
+        <activity android:name=".Administration"> </activity>
 
 
         <activity android:name=".Agence"></activity>
-
+        <activity android:name=".Signup"></activity>
 
 
     </application>
