@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Signup extends AppCompatActivity {
 
@@ -26,6 +28,8 @@ public class Signup extends AppCompatActivity {
     private TextView link_login;
     private ProgressBar progressBar;
     private FirebaseAuth myauth;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,59 +44,84 @@ public class Signup extends AppCompatActivity {
         link_login =(TextView)findViewById(R.id.link_login);
         myauth = FirebaseAuth.getInstance();
         btn_signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Login();
-            }
-        });
+                                          @Override
+                                          public void onClick(View v) {
+                                              String email = input_email.getText().toString().trim();
+                                              String password = input_password.getText().toString().trim();
+                                              String confirPassword = input_password_conf.getText().toString().trim();
+                                              if (TextUtils.isEmpty(email)) {
+                                                  Toast.makeText(Signup.this, "Please Enter Email", Toast.LENGTH_SHORT).show();
+                                                  return;
+                                              }
+                                              if (TextUtils.isEmpty(password)) {
 
-        link_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Administration.class);
-                startActivityForResult(intent, REQUEST_SIGNUP);
-            }
-        });
+                                                  Toast.makeText(Signup.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
+                                                  return;
+                                              }
 
-    }
-    private void Login() {
-        progressBar.setVisibility(View.VISIBLE);
+                                              if (TextUtils.isEmpty(confirPassword)) {
 
-        String email,password;
+                                                  Toast.makeText(Signup.this, "Please Enter ConfirmPassword", Toast.LENGTH_SHORT).show();
+                                                  return;
 
-        email = input_email.getText().toString().trim();
-        password = input_password.getText().toString().trim();
+                                              }
 
-        if (TextUtils.isEmpty(email)){
-            Toast.makeText(Signup.this,"Entrer l'Email SVP !!",Toast.LENGTH_LONG).show();
-            return;
-        }
+                                              if (password.length() < 100) {
+                                                  Toast.makeText(Signup.this, "Password too short", Toast.LENGTH_SHORT).show();
+                                              }
 
-        if (TextUtils.isEmpty(password)){
-            Toast.makeText(Signup.this,"Entrer le Password  SVP !!",Toast.LENGTH_LONG).show();
-            return;
-        }
+                                              progressBar.setVisibility(View.VISIBLE);
 
-        myauth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                              if (password.equals(confirPassword)) {
+                                                  myauth.createUserWithEmailAndPassword(email, password)
+                                                          .addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
+
+                                                              @Override
+                                                              public void onComplete(@NonNull Task<AuthResult> task) {
+
+                                                                  progressBar.setVisibility(View.GONE);
+                                                                  if (task.isSuccessful()) {
+
+                                                                      startActivity(new Intent(getApplicationContext(), Administration.class));
+                                                                      Toast.makeText(Signup.this, "Le compte a ete bien cree ", Toast.LENGTH_SHORT).show();
+                                                                  } else {
+                                                                      Toast.makeText(Signup.this, "Authentification Failed ", Toast.LENGTH_SHORT).show();
+                                                                  }
+
+
+                                                              }
+
+
+                                                              //...
+
+
+                                                          });
+                                              }
+                                          }
+                                      });
+
+
+                link_login.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Connection avec success !", Toast.LENGTH_LONG).show();
-                            progressBar.setVisibility(View.GONE);
-
-                            Intent intent = new Intent(Signup.this, Agence.class);
-                            startActivity(intent);
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(), " Echec de la Connection ! " , Toast.LENGTH_LONG).show();
-                            progressBar.setVisibility(View.GONE);
-                        }
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Administration.class);
+                        startActivityForResult(intent, REQUEST_SIGNUP);
                     }
+
+
                 });
-    }
+
+            }
+
+        }
 
 
-}
+
+
+
+
+
+
+
 
 
