@@ -45,9 +45,9 @@
             android:layout_marginBottom="8dp">
 
             <EditText
-                android:id="@+id/input_email"
+                android:id="@+id/email2"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="33dp"
                 android:background="@android:color/white"
                 android:drawableLeft="@drawable/ic_email"
                 android:hint="Email"
@@ -63,9 +63,9 @@
             app:passwordToggleEnabled="true">
 
             <EditText
-                android:id="@+id/input_password"
+                android:id="@+id/password2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="33dp"
                 android:background="@android:color/white"
 
                 android:drawableStart="@drawable/ic_secure"
@@ -84,12 +84,71 @@
             <EditText
                 android:id="@+id/input_password_conf"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="33dp"
                 android:background="@android:color/white"
 
                 android:drawableStart="@android:drawable/ic_secure"
                 android:hint="Confirmation Password"
                 android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
+        <!-- nom agence label -->
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/agence"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@android:color/white"
+
+                android:hint="Nom Agence" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!-- adresse agence  label -->
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/adresse"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@android:color/white"
+
+                android:drawableStart="@android:drawable/ic_menu_directions"
+                android:hint="Adresse Agence" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!-- telephone agence   label -->
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/tel"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@android:color/white"
+
+                android:drawableStart="@android:drawable/stat_sys_vp_phone_call"
+                android:hint="Telephone"
+                android:inputType="number|phone" />
         </android.support.design.widget.TextInputLayout>
 
         <!-- Signup Button -->
@@ -100,7 +159,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
-            android:background="@android:color/holo_red_dark"
             android:padding="12dp"
             android:text="Create Account" />
 
@@ -114,6 +172,7 @@
             android:text="Already a member? Login"
             android:textColor="@android:color/white"
             android:textSize="16dip" />
+
 
     </LinearLayout>
 </ScrollView>

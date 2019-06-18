@@ -37,7 +37,7 @@
             android:layout_marginBottom="8dp">
 
             <EditText
-                android:id="@+id/input_email"
+                android:id="@+id/email1"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@android:color/white"
@@ -57,7 +57,7 @@
             app:passwordToggleEnabled="true">
 
             <EditText
-                android:id="@+id/input_password"
+                android:id="@+id/password1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"

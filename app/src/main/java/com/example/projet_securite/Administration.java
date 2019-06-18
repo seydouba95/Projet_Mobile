@@ -36,7 +36,7 @@ public class Administration extends AppCompatActivity {
         getSupportActionBar().setTitle("Connection");
 
         btn_login = (Button) findViewById(R.id.btn_login);
-        input_email = (EditText) findViewById(R.id.input_email);
+        input_email = (EditText) findViewById(R.id.email2);
         input_password = (EditText) findViewById(R.id.input_password_conf);
         link_signup = (TextView) findViewById(R.id.link_signup);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -45,7 +45,9 @@ public class Administration extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Login();
+
             }
         });
 
@@ -84,7 +86,7 @@ public class Administration extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Connection avec success !", Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
 
-                            Intent intent = new Intent(Administration.this, Agence.class);
+                            Intent intent = new Intent(getApplicationContext(), Agence.class);
                             startActivity(intent);
                         }
                         else {
