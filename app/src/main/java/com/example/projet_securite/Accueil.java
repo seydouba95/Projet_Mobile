@@ -49,7 +49,7 @@ public class Accueil extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), com.example.projet_securite.Administration.class);
+                Intent intent = new Intent(getApplication(), com.example.projet_securite.Signup.class);
                 startActivity(intent);
 
             }
