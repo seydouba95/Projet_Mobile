@@ -7,6 +7,11 @@ public class Client {
     public String addresse;
     public String telephone;
     public String email;
+    //public String photo;
+
+
+    public Client() {
+    }
 
     public Client(String prenom, String nom, String addresse, String telephone, String email) {
         this.prenom = prenom;
@@ -15,5 +20,5 @@ public class Client {
         this.telephone = telephone;
         this.email = email;
     }
-    //public String photo;
+
 }
