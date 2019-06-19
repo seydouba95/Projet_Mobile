@@ -53,7 +53,7 @@
             <EditText
                 android:id="@+id/txt_prenom"
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="24dp"
 
                 android:background="@android:color/white"
                 android:hint="Prenom" />
@@ -70,7 +70,7 @@
             <EditText
                 android:id="@+id/txt_nom"
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="24dp"
 
                 android:background="@android:color/white"
                 android:hint="Nom" />
@@ -87,7 +87,7 @@
             <EditText
                 android:id="@+id/txt_date"
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="24dp"
 
                 android:background="@android:color/white"
                 android:hint="Date Naissance"
@@ -106,10 +106,9 @@
             <EditText
                 android:id="@+id/addresse1"
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="24dp"
                 android:background="@android:color/white"
 
-                android:drawableStart="@android:drawable/ic_menu_directions"
                 android:hint="Adressse" />
         </android.support.design.widget.TextInputLayout>
 
@@ -124,7 +123,7 @@
             <EditText
                 android:id="@+id/txt_age"
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="24dp"
 
                 android:background="@android:color/white"
                 android:hint="Age"
@@ -142,7 +141,7 @@
             <EditText
                 android:id="@+id/txt_taille"
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="24dp"
 
                 android:background="@android:color/white"
                 android:hint="Taille"
@@ -161,7 +160,7 @@
             <EditText
                 android:id="@+id/txt_poids"
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="24dp"
 
                 android:background="@android:color/white"
                 android:hint="Poids"
@@ -182,10 +181,9 @@
             <EditText
                 android:id="@+id/tel1"
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="24dp"
                 android:background="@android:color/white"
 
-                android:drawableStart="@android:drawable/stat_sys_vp_phone_call"
                 android:hint="Telephone"
                 android:inputType="number|phone" />
         </android.support.design.widget.TextInputLayout>
@@ -198,6 +196,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
+            android:onClick="insert"
             android:padding="12dp"
             android:text="Envoyer" />
 
