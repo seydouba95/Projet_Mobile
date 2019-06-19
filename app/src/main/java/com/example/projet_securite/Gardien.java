@@ -12,16 +12,18 @@ public class Gardien {
     public String age;
     public String taille;
     public String poids;
+    public String date;
 
    // public Date date;
 
 
 
 
-    public Gardien(String id, String prenom, String nom, String address, String age, String taille, String poids, String phone) {
+    public Gardien(String id, String prenom, String nom, String date, String address, String age, String taille, String poids, String phone) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
+        this.date = date;
         this.addresse = address;
         this.telephone = phone;
         this.age = age;
