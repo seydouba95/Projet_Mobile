@@ -12,5 +12,6 @@ public class Deposer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.deposer);
+        getSupportActionBar().setTitle("Demande de Recrutement");
     }
 }

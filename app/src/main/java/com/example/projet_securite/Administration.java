@@ -33,7 +33,7 @@ public class Administration extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.administration);
-        getSupportActionBar().setTitle("Connection");
+        getSupportActionBar().setTitle("Connection Agence");
 
         btn_login = (Button) findViewById(R.id.btn_login);
         input_email = (EditText) findViewById(R.id.email1);
