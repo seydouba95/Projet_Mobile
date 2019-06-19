@@ -62,8 +62,11 @@ public class Deposer extends AppCompatActivity {
     }
 
     private void recruter(){
+
+
         String prenom = txt_prenom.getText().toString().trim();
         String nom = txt_nom.getText().toString().trim();
+         String date = txt_date.getText().toString();
         String address = addresse1.getText().toString().trim();
         String age = txt_age.getText().toString().trim();
         String taille = txt_taille.getText().toString().trim();
@@ -71,11 +74,11 @@ public class Deposer extends AppCompatActivity {
         String phone = tel.getText().toString().trim();
 
 
-        if (!TextUtils.isEmpty(prenom) && !TextUtils.isEmpty(nom) && !TextUtils.isEmpty(address) &&
+        if (!TextUtils.isEmpty(prenom) && !TextUtils.isEmpty(nom) && !TextUtils.isEmpty(date) && !TextUtils.isEmpty(address) &&
                 !TextUtils.isEmpty(age)  && !TextUtils.isEmpty(taille) && !TextUtils.isEmpty(poids) && !TextUtils.isEmpty(phone)){
 
             String id= myRef.push().getKey();
-            gardien = new Gardien(id,prenom,nom,address,age,taille,poids,phone);
+            gardien = new Gardien(id,prenom,nom,date,address,age,taille,poids,phone);
             myRef.child(id).setValue(gardien);
             Toast.makeText(Deposer.this,"envoie reussi",Toast.LENGTH_LONG).show();
 
