@@ -17,7 +17,20 @@ public class Gardien {
    // public Date date;
 
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public Gardien() {
+    }
 
     public Gardien(String id, String prenom, String nom, String date, String address, String age, String taille, String poids, String phone) {
         this.id = id;
@@ -90,6 +103,11 @@ public class Gardien {
 
     public void setPoids(String poids) {
         this.poids = poids;
+    }
+
+
+    public String toString(){
+        return prenom + " " + nom + " " + age + " " + addresse + " " + telephone + " " + poids + " " + taille;
     }
 
 
