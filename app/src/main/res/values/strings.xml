@@ -38,6 +38,10 @@
     <string name="login_failed">"Login failed"</string>
     <string name="connection_success" />
     <string name="input_invalid_password">password</string>
+    <string name="title_activity_agence">Agence</string>
+    <string name="tab_text_1">Liste Gardiens</string>
+    <string name="tab_text_2">Liste Agences</string>
+    <string name="tab_text_3">Liste Clients</string>
 
 
 </resources>
