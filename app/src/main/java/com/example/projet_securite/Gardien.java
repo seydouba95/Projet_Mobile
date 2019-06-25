@@ -7,7 +7,7 @@ public class Gardien {
   public String id;
     public String nom;
     public String prenom;
-    public String addresse;
+    public String adresse;
     public String telephone;
     public String age;
     public String taille;
@@ -37,7 +37,7 @@ public class Gardien {
         this.nom = nom;
         this.prenom = prenom;
         this.date = date;
-        this.addresse = address;
+        this.adresse = address;
         this.telephone = phone;
         this.age = age;
         this.taille = taille;
@@ -65,12 +65,12 @@ public class Gardien {
         this.prenom = prenom;
     }
 
-    public String getAddresse() {
-        return addresse;
+    public String getAdresse() {
+        return adresse;
     }
 
-    public void setAddresse(String addresse) {
-        this.addresse = addresse;
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
     }
 
     public String getTelephone() {
@@ -106,9 +106,7 @@ public class Gardien {
     }
 
 
-    public String toString(){
-        return prenom + " " + nom + " " + age + " " + addresse + " " + telephone + " " + poids + " " + taille;
-    }
+
 
 
 }
