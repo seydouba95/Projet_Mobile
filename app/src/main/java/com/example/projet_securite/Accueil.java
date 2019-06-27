@@ -11,7 +11,7 @@ public class Accueil extends AppCompatActivity {
 
     Button buttonRecrutement;
     Button buttonEngagement;
-    Button button;
+    Button buttonGestionAgence;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -20,7 +20,7 @@ public class Accueil extends AppCompatActivity {
         setContentView(R.layout.accueil);
         buttonRecrutement = (Button) findViewById(R.id.button_recrutement);
         buttonEngagement = (Button) findViewById(R.id.button_engagement);
-        button = (Button) findViewById(R.id.button);
+        buttonGestionAgence = (Button) findViewById(R.id.button_gestion_agence);
 
         buttonEngagement.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +39,7 @@ public class Accueil extends AppCompatActivity {
             }
         });
 
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonGestionAgence.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(), com.example.projet_securite.Administration.class);
