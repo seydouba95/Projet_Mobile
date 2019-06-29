@@ -232,6 +232,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
                         android:textSize="24sp"
                         android:textStyle="bold|italic" />
                 </LinearLayout>
@@ -271,6 +273,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
                         android:textSize="24sp"
                         android:textStyle="bold|italic" />
                 </LinearLayout>
@@ -289,11 +293,11 @@
 
                     <TextView
                         android:id="@+id/textView22"
-                        android:layout_width="wrap_content"
+                        android:layout_width="370dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="DATENAISSANCE"
+                        android:text="DATE"
                         android:textColor="#0091EA"
                         android:textSize="30sp"
                         android:textStyle="bold|italic" />
@@ -307,9 +311,11 @@
 
                     <TextView
                         android:id="@+id/textView_naiss_gardien"
-                        android:layout_width="wrap_content"
+                        android:layout_width="88dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
                         android:textSize="24sp"
                         android:textStyle="bold|italic" />
                 </LinearLayout>
