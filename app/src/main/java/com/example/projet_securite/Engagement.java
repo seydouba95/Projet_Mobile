@@ -46,7 +46,7 @@ public class Engagement extends AppCompatActivity {
                     Gardien gardien = dataSnapshot1.getValue(Gardien.class);
                     ListGardien.add(gardien);
                 }
-                myadapter = new Myadapter(Engagement.this,ListGardien);
+                myadapter = new Myadapter(Engagement.this, ListGardien);
                 myrecycleview.setAdapter(myadapter);
             }
 

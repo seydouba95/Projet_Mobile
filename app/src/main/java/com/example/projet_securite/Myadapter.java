@@ -37,6 +37,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
 
         myViewholder.prenom.setText(gardien.get(i).prenom);
         myViewholder.nom.setText(gardien.get(i).nom);
+        myViewholder.id = gardien.get(i).id;
     }
 
     @Override
@@ -47,6 +48,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
     public class MyViewholder extends RecyclerView.ViewHolder {
 
         TextView prenom,nom;
+        String id;
 
         public MyViewholder(@NonNull final View itemView) {
             super(itemView);
@@ -57,7 +59,8 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
             prenom.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(itemView.getContext(),Agence.class);
+                    Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
+                    intent.putExtra("id", id);
                     context.startActivity(intent);
                     Toast.makeText(itemView.getContext(), prenom.getText()+" "+nom.getText(), Toast.LENGTH_SHORT).show();
                 }
@@ -65,7 +68,8 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
             nom.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(itemView.getContext(),Agence.class);
+                    Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
+                    intent.putExtra("id", id);
                     context.startActivity(intent);
 
                     Toast.makeText(itemView.getContext(), prenom.getText()+" "+nom.getText(), Toast.LENGTH_SHORT).show();
