@@ -13,6 +13,8 @@ public class Gardien {
     public String taille;
     public String poids;
     public String date;
+    public Client client;
+    public Agence agence;
 
    // public Date date;
 
@@ -32,7 +34,7 @@ public class Gardien {
     public Gardien() {
     }
 
-    public Gardien(String id, String prenom, String nom, String date, String address, String age, String taille, String poids, String phone) {
+    public Gardien(String id, String prenom, String nom, String date, String address, String age, String taille, String poids, String phone,Client client,Agence agence) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -42,6 +44,8 @@ public class Gardien {
         this.age = age;
         this.taille = taille;
         this.poids = poids;
+        this.client = client;
+        this.agence = agence;
 
     }
 

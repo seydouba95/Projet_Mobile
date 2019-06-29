@@ -33,7 +33,7 @@ public class Administration extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.administration);
-        getSupportActionBar().setTitle("Connection Agence");
+        getSupportActionBar().setTitle("Connection AgenceActivity");
 
         btn_login = (Button) findViewById(R.id.btn_login);
         input_email = (EditText) findViewById(R.id.email1);
@@ -63,7 +63,7 @@ public class Administration extends AppCompatActivity {
     private void Login() {
           progressBar.setVisibility(View.VISIBLE);
 
-          String email,password;
+          final String email,password;
 
           email = input_email.getText().toString().trim();
           password = input_password.getText().toString().trim();
@@ -86,7 +86,8 @@ public class Administration extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Connection avec success !", Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
 
-                            Intent intent = new Intent(getApplicationContext(), Agence.class);
+                            Intent intent = new Intent(getApplicationContext(), AgenceActivity.class);
+                            intent.putExtra("email",email);
                             startActivity(intent);
                         }
                         else {

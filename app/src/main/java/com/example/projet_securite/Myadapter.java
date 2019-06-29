@@ -35,9 +35,10 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
     @Override
     public void onBindViewHolder(@NonNull Myadapter.MyViewholder myViewholder, int i) {
 
-        myViewholder.prenom.setText(gardien.get(i).prenom);
-        myViewholder.nom.setText(gardien.get(i).nom);
+        myViewholder.txt_prenom.setText(gardien.get(i).prenom);
+        myViewholder.txt_nom.setText(gardien.get(i).nom);
         myViewholder.id = gardien.get(i).id;
+        myViewholder.nom = gardien.get(i).nom;
     }
 
     @Override
@@ -47,32 +48,34 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
 
     public class MyViewholder extends RecyclerView.ViewHolder {
 
-        TextView prenom,nom;
-        String id;
+        TextView txt_prenom,txt_nom;
+        String id,nom;
 
         public MyViewholder(@NonNull final View itemView) {
             super(itemView);
-            prenom = itemView.findViewById(R.id.prenom);
+            txt_prenom = itemView.findViewById(R.id.prenom);
 
-            nom = itemView.findViewById(R.id.nom);
+            txt_nom = itemView.findViewById(R.id.nom);
 
-            prenom.setOnClickListener(new View.OnClickListener() {
+            txt_prenom.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
                     intent.putExtra("id", id);
+                    intent.putExtra("nom",nom);
                     context.startActivity(intent);
-                    Toast.makeText(itemView.getContext(), prenom.getText()+" "+nom.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(itemView.getContext(), txt_prenom.getText()+" "+txt_nom.getText(), Toast.LENGTH_SHORT).show();
                 }
             });
-            nom.setOnClickListener(new View.OnClickListener() {
+            txt_nom.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
                     intent.putExtra("id", id);
+                    intent.putExtra("nom",nom);
                     context.startActivity(intent);
 
-                    Toast.makeText(itemView.getContext(), prenom.getText()+" "+nom.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(itemView.getContext(), txt_prenom.getText()+" "+txt_nom.getText(), Toast.LENGTH_SHORT).show();
                 }
             });
 

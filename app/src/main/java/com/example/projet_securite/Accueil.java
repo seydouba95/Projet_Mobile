@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Accueil extends AppCompatActivity {
 
-    Button buttonRecrutement;
+
     Button buttonEngagement;
     Button buttonGestionAgence;
     @Override
@@ -18,7 +18,7 @@ public class Accueil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.accueil);
-        buttonRecrutement = (Button) findViewById(R.id.button_recrutement);
+
         buttonEngagement = (Button) findViewById(R.id.button_engagement);
         buttonGestionAgence = (Button) findViewById(R.id.button_gestion_agence);
 
@@ -30,14 +30,7 @@ public class Accueil extends AppCompatActivity {
                 startActivity(engagement);
             }
         });
-        buttonRecrutement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), com.example.projet_securite.Deposer.class);
-                startActivity(intent);
 
-            }
-        });
 
         buttonGestionAgence.setOnClickListener(new View.OnClickListener() {
             @Override

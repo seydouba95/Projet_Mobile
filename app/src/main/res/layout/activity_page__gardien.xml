@@ -13,4 +13,11 @@
         android:text="TextView"
         tools:layout_editor_absoluteX="111dp"
         tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/textView_nom_gardien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView" />
 </LinearLayout>

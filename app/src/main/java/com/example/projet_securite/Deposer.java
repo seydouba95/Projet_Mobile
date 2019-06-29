@@ -74,11 +74,12 @@ public class Deposer extends AppCompatActivity {
             String phone = tel.getText().toString().trim();
 
 
+
             if (!TextUtils.isEmpty(prenom) && !TextUtils.isEmpty(nom) && !TextUtils.isEmpty(date) && !TextUtils.isEmpty(address) &&
                     !TextUtils.isEmpty(age)  && !TextUtils.isEmpty(taille) && !TextUtils.isEmpty(poids) && !TextUtils.isEmpty(phone)){
 
                 String id= myRef.push().getKey();
-                gardien = new Gardien(id,prenom,nom,date,address,age,taille,poids,phone);
+                gardien = new Gardien(id,prenom,nom,date,address,age,taille,poids,phone,null,null);
                 myRef.child(id).setValue(gardien);
                 Toast.makeText(Deposer.this,"envoie reussi",Toast.LENGTH_LONG).show();
 

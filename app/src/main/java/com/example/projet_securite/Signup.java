@@ -38,7 +38,7 @@ public class Signup extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
-        getSupportActionBar().setTitle("Creation Compte Agence");
+        getSupportActionBar().setTitle("Creation Compte AgenceActivity");
 
         btn_signup = (Button) findViewById(R.id.btn_signup);
         input_email = (EditText)findViewById(R.id.email2);
