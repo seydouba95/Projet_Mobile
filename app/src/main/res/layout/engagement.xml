@@ -20,6 +20,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Liste Des Gardiens"
+                android:textColor="@android:color/black"
                 android:textSize="30sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
@@ -35,6 +36,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="PRENOM"
+                android:textColor="#0091EA"
                 android:textSize="24sp"
                 android:textStyle="bold|italic" />
 
@@ -45,6 +47,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="NOM"
+                android:textColor="#0091EA"
                 android:textSize="24sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
