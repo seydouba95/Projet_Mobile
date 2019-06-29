@@ -38,7 +38,13 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
         myViewholder.txt_prenom.setText(gardien.get(i).prenom);
         myViewholder.txt_nom.setText(gardien.get(i).nom);
         myViewholder.id = gardien.get(i).id;
-        myViewholder.nom = gardien.get(i).nom;
+        myViewholder.adresse = gardien.get(i).adresse;
+        myViewholder.telephone = gardien.get(i).telephone;
+        myViewholder.age = gardien.get(i).age;
+        myViewholder.taille=gardien.get(i).taille;
+        myViewholder.poids=gardien.get(i).poids;
+        myViewholder.date=gardien.get(i).date;
+
     }
 
     @Override
@@ -49,7 +55,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
     public class MyViewholder extends RecyclerView.ViewHolder {
 
         TextView txt_prenom,txt_nom;
-        String id,nom;
+        String id,adresse,telephone,age,taille,poids,date;
 
         public MyViewholder(@NonNull final View itemView) {
             super(itemView);
@@ -62,7 +68,12 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
                 public void onClick(View v) {
                     Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
                     intent.putExtra("id", id);
-                    intent.putExtra("nom",nom);
+                    intent.putExtra("adresse",adresse);
+                    intent.putExtra("telephone",telephone);
+                    intent.putExtra("age",age);
+                    intent.putExtra("taille",taille);
+                    intent.putExtra("poids",poids);
+                    intent.putExtra("date",date);
                     context.startActivity(intent);
                     Toast.makeText(itemView.getContext(), txt_prenom.getText()+" "+txt_nom.getText(), Toast.LENGTH_SHORT).show();
                 }
@@ -72,7 +83,12 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
                 public void onClick(View v) {
                     Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
                     intent.putExtra("id", id);
-                    intent.putExtra("nom",nom);
+                    intent.putExtra("adresse",adresse);
+                    intent.putExtra("telephone",telephone);
+                    intent.putExtra("age",age);
+                    intent.putExtra("taille",taille);
+                    intent.putExtra("poids",poids);
+                    intent.putExtra("date",date);
                     context.startActivity(intent);
 
                     Toast.makeText(itemView.getContext(), txt_prenom.getText()+" "+txt_nom.getText(), Toast.LENGTH_SHORT).show();

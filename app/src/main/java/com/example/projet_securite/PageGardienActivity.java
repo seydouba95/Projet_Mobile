@@ -8,7 +8,14 @@ import android.widget.TextView;
 public class PageGardienActivity extends AppCompatActivity {
 
     TextView textViewId;
-    TextView textViewNom;
+    TextView textViewAdresse;
+    TextView textViewTelephone;
+    TextView textViewAge;
+    TextView textViewTaille;
+    TextView textViewPoids;
+    TextView textViewDate;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,11 +24,35 @@ public class PageGardienActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         String id = i.getStringExtra("id");
-        String nom = i.getStringExtra("nom");
+        String adresse= i.getStringExtra("adresse");
+        String telephone = i.getStringExtra("telephone");
+        String age = i.getStringExtra("age");
+        String taille = i.getStringExtra("taille");
+        String poids = i.getStringExtra("poids");
+        String date = i.getStringExtra("date");
 
         textViewId = this.findViewById(R.id.textView_id_gardien);
         textViewId.setText(id);
-        textViewNom = this.findViewById(R.id.textView_nom_gardien);
-        textViewNom.setText(nom);
+
+        textViewAdresse = this.findViewById(R.id.textView_adresse_gardien);
+        textViewAdresse.setText(adresse);
+
+        textViewTelephone = this.findViewById(R.id.textView_tel_gardien);
+        textViewTelephone.setText(telephone);
+
+        textViewAge = this.findViewById(R.id.textView_age_gardien);
+        textViewAge.setText(age);
+
+        textViewTaille = this.findViewById(R.id.textView_taille_gardien);
+        textViewTaille.setText(taille);
+
+        textViewPoids= this.findViewById(R.id.textView_poids_gardien);
+        textViewPoids.setText(poids);
+
+        textViewDate = this.findViewById(R.id.textView_naiss_gardien);
+        textViewDate.setText(date);
+
+
+
     }
 }
