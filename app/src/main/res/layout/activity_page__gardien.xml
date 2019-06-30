@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".PageGardienActivity" >
 
+
     <LinearLayout
+        android:id="@+id/linearlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -60,7 +62,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView_id_gardien"
@@ -84,7 +86,7 @@
                     android:layout_width="280dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView12"
@@ -102,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView_adresse_gardien"
@@ -115,6 +117,7 @@
                         android:textStyle="bold|italic" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="507dp"
@@ -125,7 +128,7 @@
                     android:layout_width="280dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView16"
@@ -143,7 +146,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView_tel_gardien"
@@ -156,6 +159,7 @@
                         android:textStyle="bold|italic" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="507dp"
@@ -166,7 +170,7 @@
                     android:layout_width="280dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView18"
@@ -184,7 +188,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView_age_gardien"
@@ -197,6 +201,7 @@
                         android:textStyle="bold|italic" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="507dp"
@@ -207,7 +212,7 @@
                     android:layout_width="280dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView20"
@@ -225,7 +230,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView_taille_gardien"
@@ -238,6 +243,7 @@
                         android:textStyle="bold|italic" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="507dp"
@@ -248,7 +254,7 @@
                     android:layout_width="280dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView21"
@@ -266,7 +272,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView_poids_gardien"
@@ -279,6 +285,7 @@
                         android:textStyle="bold|italic" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="507dp"
@@ -289,7 +296,7 @@
                     android:layout_width="280dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView22"
@@ -319,8 +326,13 @@
                         android:textSize="24sp"
                         android:textStyle="bold|italic" />
                 </LinearLayout>
+
             </LinearLayout>
 
+
         </LinearLayout>
+
     </LinearLayout>
+
+
 </android.support.design.widget.CoordinatorLayout>

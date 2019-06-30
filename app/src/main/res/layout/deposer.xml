@@ -56,7 +56,8 @@
                 android:layout_height="24dp"
 
                 android:background="@android:color/white"
-                android:hint="Prenom" />
+                android:hint="Prenom"
+                android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
 
         <!-- nom  label -->
@@ -73,7 +74,8 @@
                 android:layout_height="24dp"
 
                 android:background="@android:color/white"
-                android:hint="Nom" />
+                android:hint="Nom"
+                android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
 
         <!-- date label -->

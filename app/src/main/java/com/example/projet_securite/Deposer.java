@@ -57,6 +57,13 @@ public class Deposer extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                   recruter();
+                  txt_nom.setText("");
+                  txt_prenom.setText("");
+                  txt_date.setText("");
+                  addresse1.setText("");
+                  txt_age.setText("");
+                  txt_taille.setText("");
+                  txt_poids.setText("");
             }
         });
     }
@@ -64,7 +71,8 @@ public class Deposer extends AppCompatActivity {
     private void recruter() {
 
 
-              String prenom = txt_prenom.getText().toString().trim();
+
+            String prenom = txt_prenom.getText().toString().trim();
             String nom = txt_nom.getText().toString().trim();
             String date = txt_date.getText().toString();
             String address = addresse1.getText().toString().trim();
@@ -86,5 +94,7 @@ public class Deposer extends AppCompatActivity {
             }else{
                 Toast.makeText(Deposer.this,"please entrer  les donnees ",Toast.LENGTH_LONG).show();
             }
+
+
         }
     }

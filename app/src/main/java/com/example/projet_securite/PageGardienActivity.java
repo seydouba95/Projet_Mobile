@@ -3,6 +3,8 @@ package com.example.projet_securite;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class PageGardienActivity extends AppCompatActivity {
@@ -14,6 +16,8 @@ public class PageGardienActivity extends AppCompatActivity {
     TextView textViewTaille;
     TextView textViewPoids;
     TextView textViewDate;
+    LinearLayout linearLayout;
+
 
 
 
@@ -52,6 +56,15 @@ public class PageGardienActivity extends AppCompatActivity {
         textViewDate = this.findViewById(R.id.textView_naiss_gardien);
         textViewDate.setText(date);
 
+        linearLayout = (LinearLayout)findViewById(R.id.linearlayout);
+
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PageGardienActivity.this,ClientActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
