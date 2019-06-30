@@ -25,6 +25,8 @@ public class PageGardienActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page__gardien);
+        getSupportActionBar().setTitle("Details Gardiens");
+
 
         Intent i = getIntent();
         String id = i.getStringExtra("id");

@@ -71,13 +71,13 @@
             android:layout_marginBottom="8dp">
 
             <EditText
-                android:id="@+id/txt_client_date"
+                android:id="@+id/txt_client_email"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
 
                 android:background="@android:color/white"
-                android:hint="Date Naissance"
-                android:inputType="date" />
+                android:hint="Email"
+                android:inputType="date|datetime|textEmailAddress" />
         </android.support.design.widget.TextInputLayout>
 
 
