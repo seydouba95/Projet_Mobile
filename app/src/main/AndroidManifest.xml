@@ -44,7 +44,7 @@
         <activity
             android:name=".Deposer"
             android:label="Recrutement De Gardiens"
-            android:parentActivityName=".Accueil">
+            android:parentActivityName=".AgenceActivity">
             <meta-data
                 android:name="android.support.PARENT_ACCUEIL"
                 android:value=".deposer" />

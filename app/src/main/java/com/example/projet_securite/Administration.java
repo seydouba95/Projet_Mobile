@@ -91,7 +91,7 @@ public class Administration extends AppCompatActivity {
                             startActivity(intent);
                         }
                         else {
-                            Toast.makeText(getApplicationContext(), " Echec de la Connection ! " , Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), " Login ou Mot de passe incorrrect ! " , Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
