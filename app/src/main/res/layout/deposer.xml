@@ -146,7 +146,7 @@
                 android:layout_height="24dp"
 
                 android:background="@android:color/white"
-                android:hint="Taille"
+                android:hint="Taille(cm)"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
@@ -165,7 +165,7 @@
                 android:layout_height="24dp"
 
                 android:background="@android:color/white"
-                android:hint="Poids"
+                android:hint="Poids(kg)"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
@@ -194,8 +194,8 @@
         <!-- bouton envoie -->
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_envoi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:onClick="insert"
