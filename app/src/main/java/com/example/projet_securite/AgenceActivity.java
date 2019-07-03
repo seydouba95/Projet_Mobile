@@ -22,7 +22,7 @@ public class AgenceActivity extends AppCompatActivity {
         Utilitaire.agenceConnecte = email;
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        FloatingActionButton fab1 = findViewById(R.id.fab1);
+
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,12 +31,6 @@ public class AgenceActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        fab1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AgenceActivity.this, Administration.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
