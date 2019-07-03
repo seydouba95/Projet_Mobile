@@ -5,31 +5,20 @@ import java.util.Date;
 public class Gardien {
 
   public String id;
-    public String nom;
-    public String prenom;
-    public String adresse;
-    public String telephone;
-    public String age;
-    public String taille;
-    public String poids;
-    public String date;
+    private String nom;
+    private String prenom;
+    private  String adresse;
+    private String telephone;
+    private String age;
+    private String taille;
+    private String poids;
+    private String date;
     public Client client;
     public Agence agence;
 
    // public Date date;
 
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
 
     public Gardien() {
     }
@@ -48,6 +37,19 @@ public class Gardien {
         this.agence = agence;
 
     }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
 
     public String getId() {
         return id;

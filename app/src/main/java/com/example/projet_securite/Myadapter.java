@@ -35,15 +35,15 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
     @Override
     public void onBindViewHolder(@NonNull Myadapter.MyViewholder myViewholder, int i) {
 
-        myViewholder.txt_prenom.setText(gardien.get(i).prenom);
-        myViewholder.txt_nom.setText(gardien.get(i).nom);
+        myViewholder.txt_prenom.setText(gardien.get(i).getPrenom());
+        myViewholder.txt_nom.setText(gardien.get(i).getNom());
         myViewholder.id = gardien.get(i).id;
-        myViewholder.adresse = gardien.get(i).adresse;
-        myViewholder.telephone = gardien.get(i).telephone;
-        myViewholder.age = gardien.get(i).age;
-        myViewholder.taille=gardien.get(i).taille;
-        myViewholder.poids=gardien.get(i).poids;
-        myViewholder.date=gardien.get(i).date;
+        myViewholder.adresse = gardien.get(i).getAdresse();
+        myViewholder.telephone = gardien.get(i).getTelephone();
+        myViewholder.age = gardien.get(i).getAge();
+        myViewholder.taille=gardien.get(i).getTaille();
+        myViewholder.poids=gardien.get(i).getPoids();
+        myViewholder.date=gardien.get(i).getDate();
 
     }
 
