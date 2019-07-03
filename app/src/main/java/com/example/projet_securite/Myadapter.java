@@ -40,7 +40,6 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
         myViewholder.id = gardien.get(i).id;
         myViewholder.adresse = gardien.get(i).getAdresse();
         myViewholder.telephone = gardien.get(i).getTelephone();
-        myViewholder.age = gardien.get(i).getAge();
         myViewholder.taille=gardien.get(i).getTaille();
         myViewholder.poids=gardien.get(i).getPoids();
         myViewholder.date=gardien.get(i).getDate();
@@ -55,7 +54,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
     public class MyViewholder extends RecyclerView.ViewHolder {
 
         TextView txt_prenom,txt_nom;
-        String id,adresse,telephone,age,taille,poids,date;
+        String id,adresse,telephone,taille,poids,date;
 
         public MyViewholder(@NonNull final View itemView) {
             super(itemView);
@@ -70,7 +69,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
                     intent.putExtra("id", id);
                     intent.putExtra("adresse",adresse);
                     intent.putExtra("telephone",telephone);
-                    intent.putExtra("age",age);
+
                     intent.putExtra("taille",taille);
                     intent.putExtra("poids",poids);
                     intent.putExtra("date",date);
@@ -85,7 +84,6 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
                     intent.putExtra("id", id);
                     intent.putExtra("adresse",adresse);
                     intent.putExtra("telephone",telephone);
-                    intent.putExtra("age",age);
                     intent.putExtra("taille",taille);
                     intent.putExtra("poids",poids);
                     intent.putExtra("date",date);

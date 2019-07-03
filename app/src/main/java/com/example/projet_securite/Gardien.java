@@ -9,7 +9,6 @@ public class Gardien {
     private String prenom;
     private  String adresse;
     private String telephone;
-    private String age;
     private String taille;
     private String poids;
     private String date;
@@ -23,14 +22,14 @@ public class Gardien {
     public Gardien() {
     }
 
-    public Gardien(String id, String prenom, String nom, String date, String address, String age, String taille, String poids, String phone,Client client,Agence agence) {
+    public Gardien(String id, String prenom, String nom, String date, String address,String taille, String poids, String phone,Client client,Agence agence) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.date = date;
         this.adresse = address;
         this.telephone = phone;
-        this.age = age;
+
         this.taille = taille;
         this.poids = poids;
         this.client = client;
@@ -87,13 +86,6 @@ public class Gardien {
         this.telephone = telephone;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
 
     public String getTaille() {
         return taille;

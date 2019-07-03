@@ -25,7 +25,7 @@ import java.util.Date;
 public class Deposer extends AppCompatActivity {
 
 
-    EditText txt_nom, txt_prenom, txt_date, addresse1, txt_age, txt_taille, txt_poids, tel;
+    EditText txt_nom, txt_prenom, txt_date, addresse1,txt_taille, txt_poids, tel;
     Button btn_envoi;
 
     FirebaseDatabase database;
@@ -44,7 +44,6 @@ public class Deposer extends AppCompatActivity {
         txt_prenom = (EditText) findViewById(R.id.txt_prenom);
         txt_date = (EditText) findViewById(R.id.txt_date);
         addresse1 = (EditText) findViewById(R.id.addresse1);
-        txt_age = (EditText) findViewById(R.id.txt_age);
         txt_taille = (EditText) findViewById(R.id.txt_taille);
         txt_poids = (EditText) findViewById(R.id.txt_poids);
         btn_envoi = (Button) findViewById(R.id.btn_envoi);
@@ -61,9 +60,9 @@ public class Deposer extends AppCompatActivity {
                   txt_prenom.setText("");
                   txt_date.setText("");
                   addresse1.setText("");
-                  txt_age.setText("");
                   txt_taille.setText("");
                   txt_poids.setText("");
+                  tel.setText("");
             }
         });
     }
@@ -76,7 +75,6 @@ public class Deposer extends AppCompatActivity {
             String nom = txt_nom.getText().toString().trim();
             String date = txt_date.getText().toString();
             String address = addresse1.getText().toString().trim();
-            String age = txt_age.getText().toString().trim();
             String taille = txt_taille.getText().toString().trim();
             String poids = txt_poids.getText().toString().trim();
             String phone = tel.getText().toString().trim();
@@ -84,10 +82,10 @@ public class Deposer extends AppCompatActivity {
 
 
             if (!TextUtils.isEmpty(prenom) && !TextUtils.isEmpty(nom) && !TextUtils.isEmpty(date) && !TextUtils.isEmpty(address) &&
-                    !TextUtils.isEmpty(age)  && !TextUtils.isEmpty(taille) && !TextUtils.isEmpty(poids) && !TextUtils.isEmpty(phone)){
+                     !TextUtils.isEmpty(taille) && !TextUtils.isEmpty(poids) && !TextUtils.isEmpty(phone)){
 
                 String id= myRef.push().getKey();
-                gardien = new Gardien(id,prenom,nom,date,address,age,taille,poids,phone,null,null);
+                gardien = new Gardien(id,prenom,nom,date,address,taille,poids,phone,null,null);
                 myRef.child(id).setValue(gardien);
                 Toast.makeText(Deposer.this,"recrutement reussi",Toast.LENGTH_LONG).show();
 

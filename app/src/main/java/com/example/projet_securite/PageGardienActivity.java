@@ -12,7 +12,6 @@ public class PageGardienActivity extends AppCompatActivity {
     TextView textViewId;
     TextView textViewAdresse;
     TextView textViewTelephone;
-    TextView textViewAge;
     TextView textViewTaille;
     TextView textViewPoids;
     TextView textViewDate;
@@ -32,7 +31,7 @@ public class PageGardienActivity extends AppCompatActivity {
         String id = i.getStringExtra("id");
         String adresse= i.getStringExtra("adresse");
         String telephone = i.getStringExtra("telephone");
-        String age = i.getStringExtra("age");
+
         String taille = i.getStringExtra("taille");
         String poids = i.getStringExtra("poids");
         String date = i.getStringExtra("date");
@@ -46,8 +45,7 @@ public class PageGardienActivity extends AppCompatActivity {
         textViewTelephone = this.findViewById(R.id.textView_tel_gardien);
         textViewTelephone.setText(telephone);
 
-        textViewAge = this.findViewById(R.id.textView_age_gardien);
-        textViewAge.setText(age);
+
 
         textViewTaille = this.findViewById(R.id.textView_taille_gardien);
         textViewTaille.setText(taille);
