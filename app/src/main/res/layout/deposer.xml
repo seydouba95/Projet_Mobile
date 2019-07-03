@@ -223,7 +223,7 @@
             android:onClick="recruter"
             android:text="ENVOYER"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textSize="30sp"
             android:textStyle="bold|italic" />
 
     </LinearLayout>
