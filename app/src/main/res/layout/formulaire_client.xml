@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FFA000"
         android:orientation="vertical">
 
         <ImageView
@@ -179,6 +180,7 @@
             android:layout_height="wrap_content"
             android:width="23dp"
             android:background="@android:color/holo_orange_light"
+            android:backgroundTint="#FFA000"
             android:text="ENVOYER"
             android:textColor="@android:color/white"
             android:textSize="30sp"
