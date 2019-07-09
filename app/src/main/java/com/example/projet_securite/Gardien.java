@@ -12,8 +12,9 @@ public class Gardien {
     private String taille;
     private String poids;
     private String date;
-    public Client client;
-    public Agence agence;
+
+    private String clientId;
+    private String agenceId;
 
    // public Date date;
 
@@ -22,7 +23,7 @@ public class Gardien {
     public Gardien() {
     }
 
-    public Gardien(String id, String prenom, String nom, String date, String address,String taille, String poids, String phone,Client client,Agence agence) {
+    public Gardien(String id, String prenom, String nom, String date, String address,String taille, String poids, String phone,String clientId, String agenceId) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -32,8 +33,8 @@ public class Gardien {
 
         this.taille = taille;
         this.poids = poids;
-        this.client = client;
-        this.agence = agence;
+        this.clientId = clientId;
+        this.agenceId = agenceId;
 
     }
 
@@ -103,8 +104,19 @@ public class Gardien {
         this.poids = poids;
     }
 
+    public String getClientId() {
+        return clientId;
+    }
 
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
+    }
 
+    public String getAgenceId() {
+        return agenceId;
+    }
 
-
+    public void setAgenceId(String agenceId) {
+        this.agenceId = agenceId;
+    }
 }

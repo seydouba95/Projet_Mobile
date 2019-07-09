@@ -34,7 +34,7 @@ public class AgenceActivity extends AppCompatActivity {
         // user.getEmail();
         // user.getUid(); // get the object ID
         // user.getPhoneNumber()
-        // etc...
+        // etc...²
 
         FloatingActionButton fab = findViewById(R.id.fab);
 

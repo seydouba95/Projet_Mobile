@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,6 +32,9 @@ public class Deposer extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     Gardien gardien;
+    private FirebaseAuth mAuth;
+    private FirebaseUser user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,8 @@ public class Deposer extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Gardiens");
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
 
         btn_envoi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,8 +90,10 @@ public class Deposer extends AppCompatActivity {
             if (!TextUtils.isEmpty(prenom) && !TextUtils.isEmpty(nom) && !TextUtils.isEmpty(date) && !TextUtils.isEmpty(address) &&
                      !TextUtils.isEmpty(taille) && !TextUtils.isEmpty(poids) && !TextUtils.isEmpty(phone)){
 
-                String id= myRef.push().getKey();
-                gardien = new Gardien(id,prenom,nom,date,address,taille,poids,phone,null,null);
+                String id = myRef.push().getKey();
+
+                String userId = user.getUid();
+                gardien = new Gardien(id,prenom,nom,date,address,taille,poids,phone,null, userId);
                 myRef.child(id).setValue(gardien);
                 Toast.makeText(Deposer.this,"recrutement reussi",Toast.LENGTH_LONG).show();
 
