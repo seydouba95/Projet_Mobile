@@ -98,7 +98,7 @@ public class Deposer extends AppCompatActivity {
                 Toast.makeText(Deposer.this,"recrutement reussi",Toast.LENGTH_LONG).show();
 
             }else{
-                Toast.makeText(Deposer.this,"please entrer  les donnees ",Toast.LENGTH_LONG).show();
+                Toast.makeText(Deposer.this,"please entrer les informations requises  ",Toast.LENGTH_LONG).show();
             }
 
 
