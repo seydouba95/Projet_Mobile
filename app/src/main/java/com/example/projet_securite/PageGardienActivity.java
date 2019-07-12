@@ -36,8 +36,6 @@ public class PageGardienActivity extends AppCompatActivity {
         String poids = i.getStringExtra("poids");
         String date = i.getStringExtra("date");
 
-        textViewId = this.findViewById(R.id.textView_id_gardien);
-        textViewId.setText(id);
 
         textViewAdresse = this.findViewById(R.id.textView_adresse_gardien);
         textViewAdresse.setText(adresse);
