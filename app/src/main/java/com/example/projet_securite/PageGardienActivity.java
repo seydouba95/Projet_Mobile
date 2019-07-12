@@ -61,7 +61,9 @@ public class PageGardienActivity extends AppCompatActivity {
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PageGardienActivity.this,ClientActivity.class);
+                String gardientId = getIntent().getStringExtra("id");
+                Intent intent = new Intent(PageGardienActivity.this, ClientActivity.class);
+                intent.putExtra("gardienId", gardientId);
                 startActivity(intent);
             }
         });

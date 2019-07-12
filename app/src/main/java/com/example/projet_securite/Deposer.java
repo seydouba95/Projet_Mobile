@@ -76,7 +76,6 @@ public class Deposer extends AppCompatActivity {
     private void recruter() {
 
 
-
             String prenom = txt_prenom.getText().toString().trim();
             String nom = txt_nom.getText().toString().trim();
             String date = txt_date.getText().toString();
