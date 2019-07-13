@@ -35,6 +35,7 @@ public class PageGardienActivity extends AppCompatActivity {
         String taille = i.getStringExtra("taille");
         String poids = i.getStringExtra("poids");
         String date = i.getStringExtra("date");
+        String agence = i.getStringExtra("agenceId");
 
 
         textViewAdresse = this.findViewById(R.id.textView_adresse_gardien);
@@ -59,6 +60,7 @@ public class PageGardienActivity extends AppCompatActivity {
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String gardientId = getIntent().getStringExtra("id");
                 Intent intent = new Intent(PageGardienActivity.this, ClientActivity.class);
                 intent.putExtra("gardienId", gardientId);

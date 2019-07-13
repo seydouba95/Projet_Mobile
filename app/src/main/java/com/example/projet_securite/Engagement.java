@@ -19,12 +19,8 @@ import java.util.ArrayList;
 public class Engagement extends AppCompatActivity {
 
     DatabaseReference myref;
-    FirebaseDatabase database;
-
     RecyclerView myrecycleview;
     ArrayList<Gardien> ListGardien ;
-
-
     Myadapter myadapter;
 
     @Override

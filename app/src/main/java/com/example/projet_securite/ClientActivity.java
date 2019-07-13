@@ -93,4 +93,5 @@ public class ClientActivity extends AppCompatActivity {
         gardienAModifier.updateChildren(updateMap);
     }
 
+
 }
