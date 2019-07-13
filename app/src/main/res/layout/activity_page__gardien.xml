@@ -53,10 +53,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center|right|center_vertical"
+                        android:gravity="center"
                         android:text="ADRESSE"
                         android:textColor="#0091EA"
-                        android:textSize="30sp"
+                        android:textSize="24sp"
                         android:textStyle="bold|italic" />
                 </LinearLayout>
 
@@ -98,7 +98,7 @@
                         android:gravity="center"
                         android:text="TEL"
                         android:textColor="#0091EA"
-                        android:textSize="30sp"
+                        android:textSize="24sp"
                         android:textStyle="bold|italic" />
                 </LinearLayout>
 
@@ -134,13 +134,13 @@
 
                     <TextView
                         android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
+                        android:layout_width="214dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="TAILLE"
+                        android:text="TAILLE(cm)"
                         android:textColor="#0091EA"
-                        android:textSize="30sp"
+                        android:textSize="24sp"
                         android:textStyle="bold|italic" />
                 </LinearLayout>
 
@@ -180,9 +180,9 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="POIDS"
+                        android:text="POIDS(kg)"
                         android:textColor="#0091EA"
-                        android:textSize="30sp"
+                        android:textSize="24sp"
                         android:textStyle="bold|italic" />
                 </LinearLayout>
 
@@ -224,7 +224,7 @@
                         android:gravity="center"
                         android:text="DATE"
                         android:textColor="#0091EA"
-                        android:textSize="30sp"
+                        android:textSize="24sp"
                         android:textStyle="bold|italic" />
                 </LinearLayout>
 

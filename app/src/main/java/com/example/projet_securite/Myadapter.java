@@ -16,6 +16,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
 
     Context context;
     ArrayList<Gardien> gardien;
+
     public Myadapter(Context c , ArrayList<Gardien> g)
     {
         this.context=c;
