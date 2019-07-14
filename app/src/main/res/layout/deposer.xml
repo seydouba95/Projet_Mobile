@@ -219,11 +219,12 @@
             android:id="@+id/btn_envoi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light"
+            android:background="@drawable/button"
+            android:backgroundTint="@android:color/white"
             android:onClick="recruter"
             android:text="ENVOYER"
-            android:textColor="@android:color/white"
-            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
             android:textStyle="bold|italic" />
 
     </LinearLayout>

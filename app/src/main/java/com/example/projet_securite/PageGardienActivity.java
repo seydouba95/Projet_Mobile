@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -15,7 +16,7 @@ public class PageGardienActivity extends AppCompatActivity {
     TextView textViewTaille;
     TextView textViewPoids;
     TextView textViewDate;
-    LinearLayout linearLayout;
+    Button button_engager;
 
 
 
@@ -55,9 +56,9 @@ public class PageGardienActivity extends AppCompatActivity {
         textViewDate = this.findViewById(R.id.textView_naiss_gardien);
         textViewDate.setText(date);
 
-        linearLayout = (LinearLayout)findViewById(R.id.linearlayout);
+    button_engager    = (Button) findViewById(R.id.buttonengager);
 
-        linearLayout.setOnClickListener(new View.OnClickListener() {
+        button_engager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

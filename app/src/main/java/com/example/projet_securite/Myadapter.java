@@ -71,7 +71,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
                     intent.putExtra("poids",poids);
                     intent.putExtra("date",date);
                     context.startActivity(intent);
-                    Toast.makeText(itemView.getContext(), txt_prenom.getText()+" "+txt_nom.getText(), Toast.LENGTH_SHORT).show();
+
                 }
             });
             txt_nom.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +86,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
                     intent.putExtra("date",date);
                     context.startActivity(intent);
 
-                    Toast.makeText(itemView.getContext(), txt_prenom.getText()+" "+txt_nom.getText(), Toast.LENGTH_SHORT).show();
+
                 }
             });
 
