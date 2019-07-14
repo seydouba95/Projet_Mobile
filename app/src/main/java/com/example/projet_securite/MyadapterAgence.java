@@ -35,8 +35,8 @@ public class MyadapterAgence  extends RecyclerView.Adapter<MyadapterAgence.MyVie
 
         myViewholder.txt_prenom.setText(gardien.get(i).getPrenom());
         myViewholder.txt_nom.setText(gardien.get(i).getNom());
-        myViewholder.agenceid.setText(gardien.get(i).getAgenceId());
-        myViewholder.clientid.setText(gardien.get(i).getClientId());
+       // myViewholder.agenceid.setText(gardien.get(i).getAgenceId());
+       // myViewholder.clientid.setText(gardien.get(i).getClientId());
 
     }
 
@@ -56,25 +56,17 @@ public class MyadapterAgence  extends RecyclerView.Adapter<MyadapterAgence.MyVie
             txt_prenom = itemView.findViewById(R.id.prenom);
 
             txt_nom = itemView.findViewById(R.id.nom);
-            agenceid = itemView.findViewById(R.id.agenceid);
-            clientid = itemView.findViewById(R.id.clientid);
+          //  agenceid = itemView.findViewById(R.id.agenceid);
+            //clientid = itemView.findViewById(R.id.clientid);
 
 
-            txt_prenom.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
-                    context.startActivity(intent);
-                }
-            });
-            txt_nom.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
-                    context.startActivity(intent);
-                }
-            });
-
+         itemView.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
+                 context.startActivity(intent);
+             }
+         });
 
 
         }
