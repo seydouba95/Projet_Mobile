@@ -47,7 +47,7 @@ public class MyadapterAgence  extends RecyclerView.Adapter<MyadapterAgence.MyVie
 
     public class MyViewholder extends RecyclerView.ViewHolder {
 
-        TextView txt_prenom,txt_nom,agenceid,clientid;
+        TextView txt_prenom, txt_nom, agenceid, clientid;
 
 
         public MyViewholder(@NonNull final View itemView) {
@@ -56,11 +56,11 @@ public class MyadapterAgence  extends RecyclerView.Adapter<MyadapterAgence.MyVie
             txt_prenom = itemView.findViewById(R.id.prenom);
 
             txt_nom = itemView.findViewById(R.id.nom);
-          //  agenceid = itemView.findViewById(R.id.agenceid);
+            //  agenceid = itemView.findViewById(R.id.agenceid);
             //clientid = itemView.findViewById(R.id.clientid);
 
 
-         itemView.setOnClickListener(new View.OnClickListener() {
+        /* itemView.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
@@ -69,7 +69,8 @@ public class MyadapterAgence  extends RecyclerView.Adapter<MyadapterAgence.MyVie
          });
 
 
-        }
+        }*/
 
+        }
     }
 }
