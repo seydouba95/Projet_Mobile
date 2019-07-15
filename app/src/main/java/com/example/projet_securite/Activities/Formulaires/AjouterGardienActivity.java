@@ -1,4 +1,4 @@
-package com.example.projet_securite;
+package com.example.projet_securite.Activities.Formulaires;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.projet_securite.R;
+import com.example.projet_securite.models.Gardien;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class DeposerActivity extends AppCompatActivity {
+public class AjouterGardienActivity extends AppCompatActivity {
 
 
     EditText txt_nom, txt_prenom, txt_date, addresse1,txt_taille, txt_poids, tel;
@@ -85,10 +87,10 @@ public class DeposerActivity extends AppCompatActivity {
                 String userId = user.getUid();
                 gardien = new Gardien(id,prenom,nom,date,address,taille,poids,phone,null, userId);
                 myRef.child(id).setValue(gardien);
-                Toast.makeText(DeposerActivity.this,"recrutement reussi",Toast.LENGTH_LONG).show();
+                Toast.makeText(AjouterGardienActivity.this,"recrutement reussi",Toast.LENGTH_LONG).show();
 
             }else{
-                Toast.makeText(DeposerActivity.this,"please entrer les informations requises  ",Toast.LENGTH_LONG).show();
+                Toast.makeText(AjouterGardienActivity.this,"please entrer les informations requises  ",Toast.LENGTH_LONG).show();
             }
 
 

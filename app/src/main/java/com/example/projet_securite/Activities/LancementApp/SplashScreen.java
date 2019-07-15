@@ -1,10 +1,12 @@
-package com.example.projet_securite;
+package com.example.projet_securite.Activities.LancementApp;
 
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import com.example.projet_securite.R;
 
 import java.util.Random;
 

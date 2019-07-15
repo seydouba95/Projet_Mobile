@@ -1,4 +1,4 @@
-package com.example.projet_securite;
+package com.example.projet_securite.Activities.Authentification;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projet_securite.R;
+import com.example.projet_securite.models.Agence;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -38,7 +40,7 @@ public class SignupActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
-        getSupportActionBar().setTitle("Creation Compte AgenceActivity");
+        getSupportActionBar().setTitle("Creation Compte ListGardiensPourAgenceActivity");
 
         btn_signup = (Button) findViewById(R.id.btn_signup);
         input_email = (EditText) findViewById(R.id.email2);

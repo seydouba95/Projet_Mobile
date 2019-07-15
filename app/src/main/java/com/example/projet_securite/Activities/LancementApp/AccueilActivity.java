@@ -1,4 +1,4 @@
-package com.example.projet_securite;
+package com.example.projet_securite.Activities.LancementApp;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,14 +9,17 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.projet_securite.Activities.Authentification.LoginActivity;
+import com.example.projet_securite.Activities.ListGardiens.ListGardiensPourClientActivity;
+import com.example.projet_securite.R;
+import com.example.projet_securite.Utilitaire;
+import com.example.projet_securite.models.Agence;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import io.grpc.okhttp.internal.Util;
 
 public class AccueilActivity extends AppCompatActivity {
 
@@ -54,7 +57,7 @@ public class AccueilActivity extends AppCompatActivity {
         buttonEngagement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent engagement = new Intent(getApplication(), EngagementActivity.class);
+                Intent engagement = new Intent(getApplication(), ListGardiensPourClientActivity.class);
                 startActivity(engagement);
             }
         });

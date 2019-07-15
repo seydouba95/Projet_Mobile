@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetailAgenceActivity">
+    tools:context=".Activities.PageDetails.DetailAgenceActivity">
 
     <TextView
         android:id="@+id/detail_agence_nom"

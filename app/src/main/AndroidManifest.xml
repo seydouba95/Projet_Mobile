@@ -12,13 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailAgenceActivity"></activity>
+        <activity android:name=".Activities.PageDetails.DetailAgenceActivity"></activity>
         <activity
-            android:name=".AgenceActivity"
+            android:name=".Activities.ListGardiens.ListGardiensPourAgenceActivity"
             android:label="@string/title_activity_agence"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".Activities.LancementApp.SplashScreen"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +32,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".AccueilActivity"
+            android:name=".Activities.LancementApp.AccueilActivity"
             android:label="@string/app_name" />
 
         <meta-data
@@ -40,25 +40,25 @@
             android:value=".accueil" />
 
         <activity
-            android:name=".DeposerActivity"
+            android:name=".Activities.Formulaires.AjouterGardienActivity"
             android:label="Recrutement De Gardiens"
-            android:parentActivityName=".AgenceActivity">
+            android:parentActivityName=".Activities.ListGardiens.ListGardiensPourAgenceActivity">
             <meta-data
                 android:name="android.support.PARENT_ACCUEIL"
                 android:value=".deposer" />
         </activity>
         <activity
-            android:name=".EngagementActivity"
+            android:name=".Activities.ListGardiens.ListGardiensPourClientActivity"
             android:label="Engagement De Gardiens"
-            android:parentActivityName=".AccueilActivity">
+            android:parentActivityName=".Activities.LancementApp.AccueilActivity">
             <meta-data
                 android:name="android.support.PARENT_ACCUEIL"
                 android:value=".engagement" />
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".PageGardienActivity" />
-        <activity android:name=".ClientActivity" />
+        <activity android:name=".Activities.Authentification.LoginActivity" />
+        <activity android:name=".Activities.Authentification.SignupActivity" />
+        <activity android:name=".Activities.PageDetails.DetailGardienActivity" />
+        <activity android:name=".Activities.Formulaires.FormEngagementPourClientActivity" />
     </application>
 
 </manifest>

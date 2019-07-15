@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.projet_securite.Activities.PageDetails.DetailGardienActivity;
+import com.example.projet_securite.models.Gardien;
+
 import java.util.ArrayList;
 
 public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
@@ -62,7 +65,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViewholder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(itemView.getContext(), PageGardienActivity.class);
+                    Intent intent = new Intent(itemView.getContext(), DetailGardienActivity.class);
                     intent.putExtra("id", id);
                     intent.putExtra("adresse", adresse);
                     intent.putExtra("telephone", telephone);

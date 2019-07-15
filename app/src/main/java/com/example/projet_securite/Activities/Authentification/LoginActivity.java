@@ -1,4 +1,4 @@
-package com.example.projet_securite;
+package com.example.projet_securite.Activities.Authentification;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +13,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projet_securite.Activities.ListGardiens.ListGardiensPourAgenceActivity;
+import com.example.projet_securite.R;
+import com.example.projet_securite.Utilitaire;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -36,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             // S'il y a déja un agent qui est connecté,
             // passer à la page agenceActivity directement
             // sans demander d'entrer le login et mot de passe.
-            Intent intent = new Intent(getApplicationContext(), AgenceActivity.class);
+            Intent intent = new Intent(getApplicationContext(), ListGardiensPourAgenceActivity.class);
             startActivity(intent);
 
             // Détruire l'activité, nous ne voulons pas que l'utilisateur
@@ -49,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.administration);
-        getSupportActionBar().setTitle("Connection AgenceActivity");
+        getSupportActionBar().setTitle("Connection ListGardiensPourAgenceActivity");
 
         btn_login = (Button) findViewById(R.id.btn_login);
         input_email = (EditText) findViewById(R.id.email1);
@@ -103,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Connection avec success !", Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
 
-                            Intent intent = new Intent(getApplicationContext(), AgenceActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), ListGardiensPourAgenceActivity.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(), " Login ou Mot de passe incorrrect ! ", Toast.LENGTH_LONG).show();

@@ -1,4 +1,4 @@
-package com.example.projet_securite;
+package com.example.projet_securite.models;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 

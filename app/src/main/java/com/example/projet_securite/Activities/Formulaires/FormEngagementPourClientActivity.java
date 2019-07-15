@@ -1,4 +1,4 @@
-package com.example.projet_securite;
+package com.example.projet_securite.Activities.Formulaires;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,14 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
+import com.example.projet_securite.R;
+import com.example.projet_securite.models.Client;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
-import java.util.Map;
 
-public class ClientActivity extends AppCompatActivity {
+public class FormEngagementPourClientActivity extends AppCompatActivity {
     EditText txt_client_nom, txt_client_prenom, txt_client_adresse,txt_client_email,txt_client_tel;
     Button btn_envoi_client;
 
@@ -46,11 +46,6 @@ public class ClientActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ajouterClientAlaBD();
-                txt_client_prenom.setText("");
-                txt_client_nom.setText("");
-                txt_client_adresse.setText("");
-                txt_client_tel.setText("");
-                txt_client_email.setText("");
             }
         });
 
@@ -74,8 +69,10 @@ public class ClientActivity extends AppCompatActivity {
            // On récupere l'ID du gardien
            String gardienId = getIntent().getStringExtra("gardienId");
            this.mettreAjourGardientDansBD(gardienId, clientId);
-           Toast.makeText(ClientActivity.this," envoie reussi",Toast.LENGTH_LONG).show();
+           Toast.makeText(FormEngagementPourClientActivity.this," envoie reussi",Toast.LENGTH_LONG).show();
 
+            // Quitter l'activité
+            this.finish();
         } else{
             Toast.makeText(this, "Veuillez entrer  les informations requises SVP !!", Toast.LENGTH_SHORT).show();
         }

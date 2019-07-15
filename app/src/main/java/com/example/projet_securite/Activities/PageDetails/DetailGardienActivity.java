@@ -1,4 +1,4 @@
-package com.example.projet_securite;
+package com.example.projet_securite.Activities.PageDetails;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class PageGardienActivity extends AppCompatActivity {
+import com.example.projet_securite.Activities.Formulaires.FormEngagementPourClientActivity;
+import com.example.projet_securite.R;
+import com.example.projet_securite.Utilitaire;
+
+public class DetailGardienActivity extends AppCompatActivity {
 
     TextView textViewId;
     TextView textViewAdresse;
@@ -64,7 +68,7 @@ public class PageGardienActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String gardientId = getIntent().getStringExtra("id");
-                    Intent intent = new Intent(PageGardienActivity.this, ClientActivity.class);
+                    Intent intent = new Intent(DetailGardienActivity.this, FormEngagementPourClientActivity.class);
                     intent.putExtra("gardienId", gardientId);
                     startActivity(intent);
                 }
@@ -75,7 +79,7 @@ public class PageGardienActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     String agenceId = getIntent().getStringExtra("agenceId");
 
-                    Intent intent = new Intent(PageGardienActivity.this, DetailAgenceActivity.class);
+                    Intent intent = new Intent(DetailGardienActivity.this, DetailAgenceActivity.class);
                     intent.putExtra("agenceId", agenceId);
                     startActivity(intent);
                 }
@@ -99,7 +103,7 @@ public class PageGardienActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         String clientId = getIntent().getStringExtra("clientId");
 
-                        Intent intent = new Intent(PageGardienActivity.this, ClientActivity.class);
+                        Intent intent = new Intent(DetailGardienActivity.this, FormEngagementPourClientActivity.class);
                         intent.putExtra("agenceId", clientId);
                         startActivity(intent);
                     }

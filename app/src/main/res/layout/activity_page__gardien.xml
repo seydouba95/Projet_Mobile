@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFAB00"
     android:orientation="vertical"
-    tools:context=".PageGardienActivity">
+    tools:context=".Activities.PageDetails.DetailGardienActivity">
 
 
     <LinearLayout

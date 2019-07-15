@@ -1,11 +1,12 @@
-package com.example.projet_securite;
+package com.example.projet_securite.Activities.PageDetails;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.projet_securite.R;
+import com.example.projet_securite.models.Agence;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
