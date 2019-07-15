@@ -24,7 +24,7 @@ public class AgenceActivity extends AppCompatActivity {
      DatabaseReference myref;
      RecyclerView myrecycleview;
      ArrayList<Gardien> ListGardien ;
-     MyadapterAgence myadapterAgence;
+     Myadapter myAdapter;
 
      @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,47 +34,45 @@ public class AgenceActivity extends AppCompatActivity {
         //Intent i = this.getIntent();
         //String email = i.getStringExtra("email");
 
-       // Utilitaire.agenceConnecte = email;
+        // Utilitaire.agenceConnecte = email;
 
         // Tu peut accéder aux informations de l'utilisateur connecté
         // partout dans ton project avec le code suivant.
 
-       // mAuth = FirebaseAuth.getInstance();
-       // FirebaseUser user = mAuth.getCurrentUser();
+        // mAuth = FirebaseAuth.getInstance();
+        // FirebaseUser user = mAuth.getCurrentUser();
 
         // user.getDisplayName();
         // user.getEmail();
         // user.getUid(); // get the object ID
         // user.getPhoneNumber()
-        // etc...²
+        // etc...
 
-            myrecycleview = findViewById(R.id.myrecycleview1);
-            myrecycleview.setLayoutManager(new LinearLayoutManager(this));
+        myrecycleview = findViewById(R.id.myrecycleview1);
+        myrecycleview.setLayoutManager(new LinearLayoutManager(this));
 
-            ListGardien = new ArrayList<Gardien>();
-            myref = FirebaseDatabase.getInstance().getReference().child("Gardiens");
+        ListGardien = new ArrayList<Gardien>();
+        myref = FirebaseDatabase.getInstance().getReference().child("Gardiens");
 
-            myref.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-                        Gardien gardien = dataSnapshot1.getValue(Gardien.class);
-                        ListGardien.add(gardien);
-                    }
-                    myadapterAgence = new MyadapterAgence(AgenceActivity.this, ListGardien);
-                    myrecycleview.setAdapter(myadapterAgence);
+        myref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
+                    Gardien gardien = dataSnapshot1.getValue(Gardien.class);
+                    ListGardien.add(gardien);
                 }
+                String profile = "agence";
+                myAdapter = new Myadapter(AgenceActivity.this, ListGardien);
+                myrecycleview.setAdapter(myAdapter);
+            }
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                }
-            });
-
-
+            }
+        });
 
         FloatingActionButton fab = findViewById(R.id.fab);
-
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,5 +82,7 @@ public class AgenceActivity extends AppCompatActivity {
             }
         });
 
+        // Arrivé à ce niveau, le profile doit changer à "agence".
+         Utilitaire.profile = "agence";
     }
 }

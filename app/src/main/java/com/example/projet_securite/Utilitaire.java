@@ -3,4 +3,13 @@ package com.example.projet_securite;
 public class Utilitaire  {
 
     static  public String agenceConnecte;
+
+    // Par défaut le profile est "client".
+    // Après connexion d'une agence, le
+    // profile doit changer à "agence".
+    // Cette variable est accessible dans tous
+    // les autres classe avec Utilitaire.profile.
+    // Après déconnexion d'une agence, le profile
+    // doit redevenir "client".
+    static public  String profile = "client";
 }

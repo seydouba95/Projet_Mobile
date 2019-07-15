@@ -37,7 +37,6 @@ public class Accueil extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(), com.example.projet_securite.Administration.class);
                 startActivity(intent);
-
             }
         });
     }
