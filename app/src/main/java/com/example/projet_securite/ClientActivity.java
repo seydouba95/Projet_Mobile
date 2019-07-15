@@ -71,7 +71,7 @@ public class ClientActivity extends AppCompatActivity {
            client = new Client(clientId, prenom_client, nom_client, adresse_client, telephone_client, email_client);
            myRefClients.child(clientId).setValue(client);
 
-           // On récupere l'ID du listGardiens
+           // On récupere l'ID du gardien
            String gardienId = getIntent().getStringExtra("gardienId");
            this.mettreAjourGardientDansBD(gardienId, clientId);
            Toast.makeText(ClientActivity.this," envoie reussi",Toast.LENGTH_LONG).show();
@@ -84,7 +84,7 @@ public class ClientActivity extends AppCompatActivity {
 
     private void mettreAjourGardientDansBD(String gardienId, String clientId) {
         // UpdateChild prend comme argument un map (structure de données composée de pairs clé/valeur)
-        // Nous mettrons dans la map, le champs de l'object listGardiens que l'on veut modifier. Comme on veut
+        // Nous mettrons dans la map, le champs de l'object gardien que l'on veut modifier. Comme on veut
         // modifier
         HashMap<String, Object> updateMap = new HashMap<String, Object>();
         updateMap.put("clientId", clientId);;
