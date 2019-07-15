@@ -15,7 +15,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class DetailAgenceActivity extends AppCompatActivity {
 
-    TextView textviewNomAgence;
+    TextView textviewNomAgence,textviewAdresseAgence,textviewTelephoneAgence;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,8 @@ public class DetailAgenceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_agence);
 
         textviewNomAgence = this.findViewById(R.id.detail_agence_nom);
+        textviewAdresseAgence = this.findViewById(R.id.details_agence_adresse);
+        textviewTelephoneAgence = this.findViewById(R.id.details_agence_telephone);
 
         String agenceId = getIntent().getStringExtra("agenceId");
         lireEtAfficherAgence(agenceId);
@@ -44,6 +46,8 @@ public class DetailAgenceActivity extends AppCompatActivity {
                 // Maintenant qu'on a l'agence, afficher les informations
                 // dans les textview etc...
                 textviewNomAgence.setText(agence.getNom());
+                textviewAdresseAgence.setText(agence.getAddresse());
+                textviewTelephoneAgence.setText(agence.getTelephone());
             }
 
             @Override

@@ -4,16 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFAB00"
     android:orientation="vertical"
     tools:context=".Activities.PageDetails.DetailAgenceActivity">
 
     <TextView
-        android:id="@+id/detail_agence_nom"
+        android:id="@+id/textView6"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="64dp"
         android:gravity="center"
-        android:text="Nom Agence"
+        android:text="INFOS SUR L'AGENCE"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="NOM AGENCE"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/detail_agence_nom"
+            android:layout_width="181dp"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:text="Nom Agence"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="108dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ADRESSE AGENCE "
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/details_agence_adresse"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Adresse Agence"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TELEPHONE"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/details_agence_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Tel Agence"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
 </LinearLayout>

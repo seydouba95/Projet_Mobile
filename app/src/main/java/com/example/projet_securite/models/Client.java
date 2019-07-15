@@ -2,7 +2,7 @@ package com.example.projet_securite.models;
 
 public class Client {
 
-    private String id;
+    public String id;
     private String prenom;
     private String nom;
     private String addresse;

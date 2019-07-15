@@ -36,7 +36,7 @@
 
         <TextView
             android:id="@+id/textView30"
-            android:layout_width="371dp"
+            android:layout_width="348dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="Prenom"
@@ -46,7 +46,7 @@
 
         <EditText
             android:id="@+id/txt_client_prenom"
-            android:layout_width="372dp"
+            android:layout_width="348dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|right"
             android:ems="10"
@@ -64,7 +64,7 @@
 
         <TextView
             android:id="@+id/textView32"
-            android:layout_width="366dp"
+            android:layout_width="347dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|right"
             android:text="Nom"
@@ -74,7 +74,7 @@
 
         <EditText
             android:id="@+id/txt_client_nom"
-            android:layout_width="368dp"
+            android:layout_width="345dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:ems="10"
@@ -92,7 +92,7 @@
 
         <TextView
             android:id="@+id/textView34"
-            android:layout_width="365dp"
+            android:layout_width="343dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="Adresse"
@@ -102,7 +102,7 @@
 
         <EditText
             android:id="@+id/txt_client_address"
-            android:layout_width="365dp"
+            android:layout_width="337dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:ems="10"
@@ -120,7 +120,7 @@
 
         <TextView
             android:id="@+id/textView36"
-            android:layout_width="363dp"
+            android:layout_width="338dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="Telephone"
@@ -130,7 +130,7 @@
 
         <EditText
             android:id="@+id/txt_client_tel"
-            android:layout_width="363dp"
+            android:layout_width="331dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:ems="10"
@@ -148,7 +148,7 @@
 
         <TextView
             android:id="@+id/textView38"
-            android:layout_width="361dp"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="Email"
@@ -158,7 +158,7 @@
 
         <EditText
             android:id="@+id/txt_client_email"
-            android:layout_width="363dp"
+            android:layout_width="334dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:ems="10"
@@ -168,11 +168,6 @@
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold|italic" />
-
-        <TextView
-            android:id="@+id/textView41"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btn_envoi_client"
@@ -185,5 +180,11 @@
             android:textColor="@android:color/white"
             android:textSize="30sp"
             android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 </ScrollView>
