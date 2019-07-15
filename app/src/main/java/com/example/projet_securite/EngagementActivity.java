@@ -5,8 +5,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,7 +14,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Engagement extends AppCompatActivity {
+public class EngagementActivity extends AppCompatActivity {
 
     DatabaseReference myref;
     RecyclerView myrecycleview;
@@ -42,7 +40,7 @@ public class Engagement extends AppCompatActivity {
                     Gardien gardien = dataSnapshot1.getValue(Gardien.class);
                     ListGardien.add(gardien);
                 }
-                myadapter = new Myadapter(Engagement.this, ListGardien);
+                myadapter = new Myadapter(EngagementActivity.this, ListGardien);
                 myrecycleview.setAdapter(myadapter);
             }
 
@@ -52,6 +50,8 @@ public class Engagement extends AppCompatActivity {
             }
         });
 
-
+        // Cette page est toujours consulté en tant que client même si
+        // visité par un utilisateur connecté (agence).
+        Utilitaire.profile = "client";
     }
 }

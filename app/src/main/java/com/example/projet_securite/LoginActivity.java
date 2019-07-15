@@ -28,6 +28,22 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private FirebaseAuth myauth;
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if (Utilitaire.unAgenceEstConnecte()) {
+            // S'il y a déja un agent qui est connecté,
+            // passer à la page agenceActivity directement
+            // sans demander d'entrer le login et mot de passe.
+            Intent intent = new Intent(getApplicationContext(), AgenceActivity.class);
+            startActivity(intent);
+
+            // Détruire l'activité, nous ne voulons pas que l'utilisateur
+            // en cliquant sur bouton retour revienne ici.
+            this.finish();
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,21 +76,22 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
     private void Login() {
-          progressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
 
-          final String email,password;
+        final String email, password;
 
-          email = input_email.getText().toString().trim();
-          password = input_password.getText().toString().trim();
+        email = input_email.getText().toString().trim();
+        password = input_password.getText().toString().trim();
 
-        if (TextUtils.isEmpty(email)){
-            Toast.makeText(LoginActivity.this,"Entrer l'Email SVP !!",Toast.LENGTH_LONG).show();
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(LoginActivity.this, "Entrer l'Email SVP !!", Toast.LENGTH_LONG).show();
             return;
         }
 
-        if (TextUtils.isEmpty(password)){
-            Toast.makeText(LoginActivity.this,"Entrer le Password  SVP !!",Toast.LENGTH_LONG).show();
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(LoginActivity.this, "Entrer le Password  SVP !!", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -87,11 +104,9 @@ public class LoginActivity extends AppCompatActivity {
                             progressBar.setVisibility(View.GONE);
 
                             Intent intent = new Intent(getApplicationContext(), AgenceActivity.class);
-                            intent.putExtra("email",email);
                             startActivity(intent);
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(), " Login ou Mot de passe incorrrect ! " , Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), " Login ou Mot de passe incorrrect ! ", Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
@@ -99,4 +114,4 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    }
+}

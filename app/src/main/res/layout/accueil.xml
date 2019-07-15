@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
     android:orientation="vertical"
-    tools:context=".Accueil">
+    tools:context=".AccueilActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:id="@+id/textView_id_gardien"
             style="@android:style/Widget.TextView"
             android:layout_width="match_parent"
-            android:layout_height="224dp"
+            android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:gravity="center"
             android:paddingRight="10dp"
@@ -38,6 +38,22 @@
             android:textColor="@android:color/background_dark"
             android:textSize="30sp"
             android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/accueil_textview_agence"
+            style="@android:style/Widget.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="example@xyz.com"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
 
     </LinearLayout>
 

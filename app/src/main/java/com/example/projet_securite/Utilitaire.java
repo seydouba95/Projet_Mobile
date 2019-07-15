@@ -21,4 +21,8 @@ public class Utilitaire  {
     static public boolean unAgenceEstConnecte() {
         return  FirebaseAuth.getInstance().getCurrentUser() != null;
     }
+
+    static public String getAgenceConnecteId() {
+        return FirebaseAuth.getInstance().getCurrentUser().getUid();
+    }
 }

@@ -1,7 +1,6 @@
 package com.example.projet_securite;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,18 +11,10 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import java.text.DateFormat;
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-public class Deposer extends AppCompatActivity {
+public class DeposerActivity extends AppCompatActivity {
 
 
     EditText txt_nom, txt_prenom, txt_date, addresse1,txt_taille, txt_poids, tel;
@@ -94,10 +85,10 @@ public class Deposer extends AppCompatActivity {
                 String userId = user.getUid();
                 gardien = new Gardien(id,prenom,nom,date,address,taille,poids,phone,null, userId);
                 myRef.child(id).setValue(gardien);
-                Toast.makeText(Deposer.this,"recrutement reussi",Toast.LENGTH_LONG).show();
+                Toast.makeText(DeposerActivity.this,"recrutement reussi",Toast.LENGTH_LONG).show();
 
             }else{
-                Toast.makeText(Deposer.this,"please entrer les informations requises  ",Toast.LENGTH_LONG).show();
+                Toast.makeText(DeposerActivity.this,"please entrer les informations requises  ",Toast.LENGTH_LONG).show();
             }
 
 

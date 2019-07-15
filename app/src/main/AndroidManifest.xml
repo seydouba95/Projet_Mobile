@@ -32,7 +32,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".Accueil"
+            android:name=".AccueilActivity"
             android:label="@string/app_name" />
 
         <meta-data
@@ -40,7 +40,7 @@
             android:value=".accueil" />
 
         <activity
-            android:name=".Deposer"
+            android:name=".DeposerActivity"
             android:label="Recrutement De Gardiens"
             android:parentActivityName=".AgenceActivity">
             <meta-data
@@ -48,9 +48,9 @@
                 android:value=".deposer" />
         </activity>
         <activity
-            android:name=".Engagement"
+            android:name=".EngagementActivity"
             android:label="Engagement De Gardiens"
-            android:parentActivityName=".Accueil">
+            android:parentActivityName=".AccueilActivity">
             <meta-data
                 android:name="android.support.PARENT_ACCUEIL"
                 android:value=".engagement" />
