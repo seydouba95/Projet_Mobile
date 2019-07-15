@@ -75,10 +75,7 @@ public class PageGardienActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     String agenceId = getIntent().getStringExtra("agenceId");
 
-                    // Cette ligne doit être modifier pour ouvrir la page PageAgenceActivity (page
-                    // qui afficher les informationls de l'agence).
-                    Intent intent = new Intent(PageGardienActivity.this, ClientActivity.class);
-
+                    Intent intent = new Intent(PageGardienActivity.this, DetailAgenceActivity.class);
                     intent.putExtra("agenceId", agenceId);
                     startActivity(intent);
                 }

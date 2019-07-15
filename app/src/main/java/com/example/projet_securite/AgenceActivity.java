@@ -31,23 +31,6 @@ public class AgenceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agence);
 
-        //Intent i = this.getIntent();
-        //String email = i.getStringExtra("email");
-
-        // Utilitaire.agenceConnecte = email;
-
-        // Tu peut accéder aux informations de l'utilisateur connecté
-        // partout dans ton project avec le code suivant.
-
-        // mAuth = FirebaseAuth.getInstance();
-        // FirebaseUser user = mAuth.getCurrentUser();
-
-        // user.getDisplayName();
-        // user.getEmail();
-        // user.getUid(); // get the object ID
-        // user.getPhoneNumber()
-        // etc...
-
         myrecycleview = findViewById(R.id.myrecycleview1);
         myrecycleview.setLayoutManager(new LinearLayoutManager(this));
 

@@ -19,7 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class Administration extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private static final int REQUEST_SIGNUP = 0;
     private Button btn_login;
@@ -54,7 +54,7 @@ public class Administration extends AppCompatActivity {
         link_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Signup.class);
+                Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }
         });
@@ -69,12 +69,12 @@ public class Administration extends AppCompatActivity {
           password = input_password.getText().toString().trim();
 
         if (TextUtils.isEmpty(email)){
-            Toast.makeText(Administration.this,"Entrer l'Email SVP !!",Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this,"Entrer l'Email SVP !!",Toast.LENGTH_LONG).show();
             return;
         }
 
         if (TextUtils.isEmpty(password)){
-            Toast.makeText(Administration.this,"Entrer le Password  SVP !!",Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this,"Entrer le Password  SVP !!",Toast.LENGTH_LONG).show();
             return;
         }
 

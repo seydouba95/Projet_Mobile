@@ -2,7 +2,7 @@ package com.example.projet_securite;
 
 public class Client {
 
-    private   String id;
+    private String id;
     private String prenom;
     private String nom;
     private String addresse;

@@ -12,6 +12,8 @@ public class Accueil extends AppCompatActivity {
 
     Button buttonEngagement;
     Button buttonGestionAgence;
+    Button buttonDeconnexion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -35,10 +37,12 @@ public class Accueil extends AppCompatActivity {
         buttonGestionAgence.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), com.example.projet_securite.Administration.class);
+                Intent intent = new Intent(getApplication(), LoginActivity.class);
                 startActivity(intent);
             }
         });
+
+
     }
 
 }

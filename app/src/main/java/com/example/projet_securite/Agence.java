@@ -1,36 +1,48 @@
 package com.example.projet_securite;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class Agence {
 
-    private String nomAgence;
-    private String adresse;
-    private String email;
-    private String telephone;
+    public String id;
+    public String nom;
+    public String addresse;
+    public String email;
+    public String telephone;
 
     public Agence() {
     }
 
     public Agence(String nomAgence, String adresse, String email, String telephone) {
-        this.nomAgence = nomAgence;
-        this.adresse = adresse;
+        this.nom = nomAgence;
+        this.addresse = adresse;
         this.email = email;
         this.telephone = telephone;
     }
 
-    public String getNomAgence() {
-        return nomAgence;
+    public String getId() {
+        return id;
     }
 
-    public void setNomAgence(String nomAgence) {
-        this.nomAgence = nomAgence;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getAdresse() {
-        return adresse;
+    public String getNom() {
+        return nom;
     }
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getAddresse() {
+        return addresse;
+    }
+
+    public void setAddresse(String addresse) {
+        this.addresse = addresse;
     }
 
     public String getEmail() {
