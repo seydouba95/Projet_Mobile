@@ -94,8 +94,8 @@ public class DetailGardienActivity extends AppCompatActivity {
 
             if (clientId == null) {
                 // Au cas ou le ce gardien n'a pas encore été pris par un client,
-                // on désactive le button qui méne au détail du client
-                buttonDetailClient.setEnabled(false);
+                // on cache le button qui méne au détail du client
+                buttonDetailClient.setVisibility(View.GONE);
             } else {
                 // le gardien est lié à un client
                 buttonDetailClient.setOnClickListener(new View.OnClickListener() {
@@ -103,8 +103,8 @@ public class DetailGardienActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         String clientId = getIntent().getStringExtra("clientId");
 
-                        Intent intent = new Intent(DetailGardienActivity.this, FormEngagementPourClientActivity.class);
-                        intent.putExtra("agenceId", clientId);
+                        Intent intent = new Intent(DetailGardienActivity.this, DetailClientActivity.class);
+                        intent.putExtra("clientId", clientId);
                         startActivity(intent);
                     }
                 });

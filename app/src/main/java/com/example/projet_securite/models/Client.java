@@ -1,5 +1,8 @@
 package com.example.projet_securite.models;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class Client {
 
     public String id;
