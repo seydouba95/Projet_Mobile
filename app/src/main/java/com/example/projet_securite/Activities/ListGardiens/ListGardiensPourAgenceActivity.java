@@ -46,7 +46,7 @@ public class ListGardiensPourAgenceActivity extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
                     Gardien gardien = dataSnapshot1.getValue(Gardien.class);
 
-                    if (gardien.getAgenceId() == Utilitaire.getAgenceConnecteId()) {
+                    if (gardien.getAgenceId().equals(Utilitaire.getAgenceConnecteId())) {
                         // Filtrer les gardiens qui ne sont pas de cette agence.
                         listGardiens.add(gardien);
                     }

@@ -44,7 +44,7 @@ public class ListGardiensPourClientActivity extends AppCompatActivity {
                     Gardien gardien = dataSnapshot1.getValue(Gardien.class);
 
                     // Filtrer les gardiens qui ont déja été recruté par un client.
-                    if (gardien.getClientId() == null) {
+                    if (gardien.getClientId() == null || gardien.getClientId().isEmpty()) {
                         ListGardien.add(gardien);
                     }
                 }

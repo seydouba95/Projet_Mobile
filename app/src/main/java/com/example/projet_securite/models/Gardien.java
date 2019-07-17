@@ -1,7 +1,10 @@
 package com.example.projet_securite.models;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
 import java.util.Date;
 
+@IgnoreExtraProperties
 public class Gardien {
 
   public String id;
@@ -17,8 +20,6 @@ public class Gardien {
     private String agenceId;
 
    // public Date date;
-
-
 
     public Gardien() {
     }
